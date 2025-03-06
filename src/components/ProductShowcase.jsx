@@ -30,17 +30,19 @@ const ProductShowcase = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto py-8">
-      <div className="flex items-center justify-between mb-8 ">
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      {/* Tabs Section */}
+      <div className="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4">
+        {/* Tab Buttons */}
         <div
-          className="flex gap-1 border border-white/20 bg-white/20 backdrop-blur-lg shadow-lg 
-        rounded-full"
+          className="flex flex-wrap justify-center gap-2 sm:gap-3 border border-white/20 bg-white/20 backdrop-blur-lg shadow-lg 
+        rounded-full p-1"
         >
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-6 py-4 rounded-full text-sm transition-colors
+              className={`px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm transition-colors
                 ${
                   activeTab === tab
                     ? "bg-emerald-400 text-black font-bold"
@@ -51,7 +53,8 @@ const ProductShowcase = () => {
             </button>
           ))}
         </div>
-        <button className="flex items-center text-sm text-gray-600 hover:text-gray-500">
+
+        <button className="flex items-center text-xs sm:text-sm text-gray-600 hover:text-gray-500">
           View All Products
           <svg
             className="w-4 h-4 ml-1"
@@ -69,7 +72,8 @@ const ProductShowcase = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+      {/* Product Grid */}
+      <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product, index) => (
           <ProductCard
             key={index}

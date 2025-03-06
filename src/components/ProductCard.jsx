@@ -1,11 +1,11 @@
 const ProductCard = ({ image, title, price }) => {
   return (
-    <div className="bg-white rounded-2xl p-6 flex flex-col items-center shadow-lg">
+    <div className="bg-white rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col items-center shadow-lg">
       <div className="relative mb-4">
         <img
           src={image || "/placeholder.svg"}
           alt={title}
-          className="w-48 h-48 object-contain"
+          className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain transition-all"
         />
         <div className="flex justify-center gap-1 mt-4">
           <span className="w-1.5 h-1.5 rounded-full bg-black"></span>
@@ -14,8 +14,8 @@ const ProductCard = ({ image, title, price }) => {
         </div>
       </div>
       <div className="text-left">
-        <p className="text-sm text-gray-400 font-bold">Best Buy</p>
-        <p className="text-sm text-black mb-2">{title}</p>
+        <p className="text-xs sm:text-sm text-gray-400 font-bold">Best Buy</p>
+        <p className="text-xs sm:text-sm text-black mb-2">{title}</p>
         <p className="font-medium text-black">₹ {price}</p>
       </div>
     </div>
