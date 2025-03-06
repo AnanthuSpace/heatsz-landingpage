@@ -29,9 +29,10 @@ const ExperienceSection = ({ experienceImage, discription }) => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {discription[0]} <br /> {discription[1]}
           </h2>
-          <button className="px-6 py-2 mt-4 text-white font-semibold rounded-full shadow-lg border border-white hover:bg-primary-dark transition">
-            Learn More
-          </button>
+          <button className="px-6 py-2 mt-4 text-white font-semibold rounded-full shadow-lg border border-white transition-all duration-300 hover:scale-105 hover:shadow-xl">
+  Learn More
+</button>
+
         </div>
       </div>
     </div>
